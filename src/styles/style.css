@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --island-green: #2BAE66FF ;
+  --white: #FCF6F5FF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Righteous&display=swap');
+body {
+  font-family: 'Mulish', sans-serif;
+  background-color: var(--white);
+}
+
+textarea:focus, input:focus, [contenteditable=true]:focus{
+  outline: none;
+}
+
+.navigation ul {
+  height: 46px;
+}
+
+.navbar-text {
+  font-family: 'Righteous', cursive;
+}
+
+.green-text {
+  color: var(--island-green);
+}
+
+.note-item {
+  background-color: var(--island-green);
+}
+
+.note-item__archive {
+  width: 46px;
+}
+
+.note-item__delete {
+  width: 46px;
+}
+
+.note-item__unarchive {
+  width: 46px;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  pointer-events: none;
+  display: block;
+}
+
+.link-detail {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link-detail::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  transition: width .3s;
+}
+
+.link-detail:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
