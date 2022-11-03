@@ -73,7 +73,7 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-  defaultKeyword: PropTypes.string.isRequired,
+  defaultKeyword: PropTypes.string,
   keywordChange: PropTypes.func.isRequired
 }
 
